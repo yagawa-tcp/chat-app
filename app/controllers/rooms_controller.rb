@@ -16,6 +16,12 @@ end
     end
   end
 
+  def destroy
+    room = Room.find(params[:room_id]) 
+    mroom.destroy
+    redirect_to room_path
+  end
+
   private
 
   def room_params
